@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dla kobity</title>
+    <link rel="stylesheet" href="sttyle.css">
+</head>
+<body>
+    <div class="strona">
+        <div class="pytanie">
+            <p>Czy mnie kochasz??</p>
+            <button onclick="kochasz()">TAKK!!</button>
+            <button onclick="nieKochasz()">NIEEE!!</button>
+        </div>
+    </div>
+    <script>
+        let body = document.querySelector("body");
+        let para = document.querySelector("p");
+
+        function kochasz() {
+            alert("Ja też Cię kocham skarbie <3");
+        }
+
+        function nieKochasz() {
+            body.style.backgroundColor = "red";
+            para.textContent = "Jak to nieee?? Kochaj mnie!!";
+            para.style.fontSize = "150px";
+        }
+    </script>
+</body>
+</html>
