@@ -5,3 +5,6 @@ body{
     align-items: center;
     font-size: 40px;
 }
+#Ptak, #Pnie {
+    display: none;
+}

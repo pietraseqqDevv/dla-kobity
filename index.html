@@ -10,22 +10,49 @@
     <div class="strona">
         <div class="pytanie">
             <p>Czy mnie kochasz??</p>
-            <button onclick="kochasz()">TAKK!!</button>
-            <button onclick="nieKochasz()">NIEEE!!</button>
+            <button onclick="kochasz()" id="tak">TAKK!!</button>
+            <button onclick="nieKochasz()" id="nie">NIEEE!!</button>
+            <br>
+            <button id="Ptak" onclick="yes()">TAK</button>
+            <button id="Pnie" onclick="no()">NIE</button>
+            <br>
+            <button onclick="location.reload()">RESTART</button>
+
         </div>
     </div>
     <script>
         let body = document.querySelector("body");
         let para = document.querySelector("p");
+        let przyciskTak = document.getElementById("tak");
+        let przyciskNie = document.getElementById("nie");
+        let przyciskPtak = document.getElementById("Ptak");
+        let przyciskPnie = document.getElementById("Pnie");
 
         function kochasz() {
-            alert("Ja też Cię kocham skarbie <3");
+            przyciskTak.style.display = "none";
+            przyciskNie.style.display = "none";
+            para.textContent = "Czy jesteś tego pewna??";
+            przyciskPtak.style.display = "inline-block";
+            przyciskPnie.style.display = "inline-block";
+
+            
         }
 
         function nieKochasz() {
             body.style.backgroundColor = "red";
             para.textContent = "Jak to nieee?? Kochaj mnie!!";
             para.style.fontSize = "150px";
+            przyciskTak.style.display = "none";
+            przyciskNie.style.display = "none";
+            przyciskPnie.style.display = "none";
+            przyciskPtak.style.display = "none";
+        }
+        function yes() {
+            alert("Ja też Cię kocham skarbie <3");
+            location.reload();
+        }
+        function no() {
+            nieKochasz();
         }
     </script>
 </body>
